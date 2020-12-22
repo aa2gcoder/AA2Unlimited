@@ -469,7 +469,7 @@ return function()
 
 	dlg:showxy(iup.CENTER, iup.CENTER)
 	__LOGGER = function(buf)
-		console.append = buf
+		console.append = sjis_to_utf8(buf)
 		--console.scrolltopos = #console.value
 		--iup.SetFocus(repl)
 		return true
